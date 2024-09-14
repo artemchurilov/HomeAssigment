@@ -16,5 +16,8 @@ int main(){
 		cout << "What's your name?"<<endl;
 		cin >> newline;
 		cout << "Hello, " << newline<<"!"<<endl;
+		if (newline=="stop"){
+			break;
+		}
 	}
 }
