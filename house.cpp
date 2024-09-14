@@ -3,10 +3,10 @@
 
 using namespace std;
 
-string newname;
+extern string newline;
 
 int main(){
 	hello();
-	cin >> newname;
-	cout << "Hello, " << newname<<"!"<<endl;
+	cin >> newline;
+	cout << "Hello, " << newline<<"!"<<endl;
 }
