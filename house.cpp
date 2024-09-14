@@ -6,7 +6,7 @@ using namespace std;
 string newname;
 
 int main(){
-	cout << "Hello, World!"<<endl;
+	hello();
 	cin >> newname;
 	cout << "Hello, " << newname<<"!"<<endl;
 }
