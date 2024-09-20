@@ -1,4 +1,0 @@
-all:
-	g++ house.cpp roof.cpp -o test
-clean:
-	rm -f *o test
