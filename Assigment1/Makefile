@@ -5,7 +5,7 @@ house.o: house.cpp
 	g++ -c house.cpp
 
 roof.o: roof.cpp
-	g++ -c house.cpp
+	g++ -c roof.cpp
 
 clean:
 	rm -f *o  myProg
