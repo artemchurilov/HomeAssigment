@@ -1,11 +1,14 @@
-myProg: main.o
-	g++ main.cpp -o myProg
+mirror: main.o mirror.o
+	g++ main.cpp mirror.cpp -o mirror
 
 main.o: main.cpp
 	g++ -c main.cpp
+	
+mirror.o: mirror.cpp
+	g++ -c mirror.cpp
 	
 clean: 
 	rm -f *o
 
 cleanall: clean
-	rm -f myProg
+	rm -f mirror
