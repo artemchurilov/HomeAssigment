@@ -15,7 +15,7 @@ int main()
     std::ifstream infile;
     std::ofstream outfile;
     infile.open(infilepath, std::ios::binary|std::ios::in);
-    uintmax_t fsize = std::filesystem::file_size(infilepath);
+    uintmax_t fsize = std::filesystem::file_size(infilepath)-1;
     char *buffer = new char[fsize];
     infile.read((char *)buffer,fsize);
     std::filesystem::path outfilepath{"final.txt"};
