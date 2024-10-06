@@ -19,7 +19,6 @@ int main() {
     int* elements = new int[elementcounter];
     int top = -1;
     std::istringstream oneword2(line);
-    int t = 0;
     while (oneword2 >> word) {
         if (word != "/" and word != "+" and word !="-" and word!="*")
         {
