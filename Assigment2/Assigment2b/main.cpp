@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include "f.h"
 
 int main() {
     std::string line;
@@ -15,18 +16,35 @@ int main() {
     while (oneword >> word) {
         elementcounter++;
     }
-    std::string* elements = new std::string[elementcounter];
-
+    int* elements = new int[elementcounter];
+    int top = -1;
     std::istringstream oneword2(line);
-    int i = 0;
+    int t = 0;
     while (oneword2 >> word) {
-        elements[i] = word;
-        i++;
+        if (word != "/" and word != "+" and word !="-" and word!="*")
+        {
+            add(elements, word, top);
+        }
+        if (word == "+")
+        {
+            plus(elements, top);
+        }
+        if (word == "-")
+        {
+            minus(elements, top);
+        }
+        if (word == "*")
+        {
+            mult(elements, top);
+        }
+        if (word == "/")
+        {
+            div(elements, top);
+        }       
     }
 
-    for (int t = 0; t < elementcounter; t++) {
-        std::cout << elements[t] << std::endl;
-    }
+    std::cout<<elements[top]<<std::endl;
+
 
     delete[] elements;
 }
