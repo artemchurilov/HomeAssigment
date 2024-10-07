@@ -11,4 +11,4 @@ clean:
 	rm -f *o
 
 cleanall: clean
-	rm -f mirror
+	rm -f mirror final.txt
