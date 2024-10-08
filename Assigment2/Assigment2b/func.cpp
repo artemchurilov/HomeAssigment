@@ -5,33 +5,33 @@
 #include "f.h"
 #include <iostream>
 
-void add(int arr[], std::string word, int &top)
+void add(float arr[], std::string word, int &top)
 {
     arr[++top] = stoi(word); 
 }
 
-void plus(int arr[], int &top)
+void plus(float arr[], int &top)
 {
     arr[top-1] = arr[top] + arr[top-1];
     arr[top] = 0;
     --top;
 }
 
-void minus(int arr[], int &top)
+void minus(float arr[], int &top)
 {
     arr[top-1] = -arr[top] + arr[top-1];
     arr[top] = 0;
     --top;
 }
 
-void mult(int arr[], int &top)
+void mult(float arr[], int &top)
 {
     arr[top-1] = arr[top] * arr[top-1];
     arr[top] = 0;
     --top;
 }
 
-void div(int arr[], int &top)
+void div(float arr[], int &top)
 {
     arr[top-1] = arr[top-1] / arr[top];
     arr[top] = 0;

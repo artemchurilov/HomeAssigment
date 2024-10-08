@@ -16,7 +16,7 @@ int main() {
     while (oneword >> word) {
         elementcounter++;
     }
-    int* elements = new int[elementcounter];
+    float* elements = new float[elementcounter];
     int top = -1;
     std::istringstream oneword2(line);
     while (oneword2 >> word) {

@@ -6,14 +6,14 @@
 #define F_H
 #include <iostream>
 
-void add(int arr[], std::string word, int &top);
+void add(float arr[], std::string word, int &top);
 
-void plus(int arr[], int &top);
+void plus(float arr[], int &top);
 
-void minus(int arr[], int &top);
+void minus(float arr[], int &top);
 
-void mult(int arr[], int &top);
+void mult(float arr[], int &top);
 
-void div(int arr[], int &top);
+void div(float arr[], int &top);
 
 #endif
