@@ -27,3 +27,49 @@ uint Transformer::getMS()
 {
     return _movespeed;
 };
+
+void Transformer::setMS(uint MS)
+{
+    _movespeed = MS;
+};
+
+uint Transformer::getIS()
+{
+    return _inventoryslots;
+};
+
+void Transformer::setIS(uint IS)
+{
+    _inventoryslots = IS;
+};
+
+uint Transformer::getEnergy()
+{
+    return _energy;
+};
+
+void Transformer::setEnergy(uint energy)
+{
+    _energy = energy;
+};
+
+
+uint Transformer::getFuel()
+{
+    return _fuel;
+};
+
+void Transformer::setFuel(uint fuel)
+{
+    _fuel = fuel;
+};
+
+uint Transformer::getAmmo()
+{
+    return _ammo;
+};
+
+void Transformer::setAmmo(uint ammo)
+{
+    _ammo = ammo;
+};
