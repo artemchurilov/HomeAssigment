@@ -1,4 +1,5 @@
-#include "func.h"
+#include <iostream>
+#include "create.h"
 void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy)
 {
     uint stMS = 1;

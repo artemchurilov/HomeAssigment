@@ -1,4 +1,23 @@
 #include "transformer.h"
+#include "inventory.h"
+
+Transformer::Transformer()
+{
+
+};
+Transformer::~Transformer()
+{
+
+};
+
+Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy):Tinventory(reIS)
+{
+    std::cout<<"created"<<std::endl;
+    setMS(reMS);
+    setIS(reIS);
+    setFuel(reFuel);
+    setEnergy(reEnergy);
+};
 
 bool Transformer::fire()
 {
@@ -27,6 +46,7 @@ uint Transformer::getMS()
 {
     return _movespeed;
 };
+
 
 void Transformer::setMS(uint MS)
 {
