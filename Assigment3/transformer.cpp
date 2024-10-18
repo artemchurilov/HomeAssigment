@@ -73,3 +73,5 @@ void Transformer::setAmmo(uint ammo)
 {
     _ammo = ammo;
 };
+
+
