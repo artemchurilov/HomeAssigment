@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #include <iostream>
 #include "transformer.h"
 #include "create.h"
@@ -11,7 +15,6 @@ int main()
 {
     uint reMS, reIS, reFuel, reEnergy;
     std::string reName;
-    uint temp;
     create(reMS, reIS, reFuel, reEnergy, reName);
     if(reMS+reIS+reFuel+reEnergy==10)
     {

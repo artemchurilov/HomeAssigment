@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #ifndef CREATE_H
 #define CREATE_H
 #include <iostream>

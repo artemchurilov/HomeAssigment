@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
@@ -10,10 +14,10 @@ public:
     ~Inventory();
     void addItem(int index, int item);
     void displayItems();
+    int getItem(int index);
 private:
     int* inv;
     int size;
-    
 };
 
 

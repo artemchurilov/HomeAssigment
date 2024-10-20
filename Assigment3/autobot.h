@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 

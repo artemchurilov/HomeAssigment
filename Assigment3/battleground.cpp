@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #include "battleground.h"
 #include "transformer.h"
 
@@ -27,7 +31,7 @@ void Battleground::addTransformer(Transformer* transformer)
         arr[count++]=transformer;
         std::cout <<"Transformer added." << std::endl;
         std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-        } 
+        }
    else {
             std::cout << "Not enough place!" << std::endl;
             std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;

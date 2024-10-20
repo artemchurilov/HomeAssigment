@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #include <iostream>
 #include "create.h"
 void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& reName)
@@ -32,7 +36,7 @@ void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& r
                         reFuel = stFuel;
                         reEnergy = stEnergy;
                         std::cout<<"So, enter your name -- ";
-                        std::cin>>reName; 
+                        std::cin>>reName;
                      }
                     else
                     {

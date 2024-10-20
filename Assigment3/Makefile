@@ -1,23 +1,42 @@
-prog: transformer.o create.o inventory.o main.o battleground.o
-	g++ main.cpp decepticon.cpp transformer.cpp create.cpp player.cpp inventory.cpp battleground.cpp autobot.cpp -o test
-transformer.o:
-	g++ -c transformer.cpp
-autobot.o:
-	g++ -c autobot.cpp
-decepticon.o:
-	g++ -c decepticon.cpp
-player.o:
-	g++ -c player.cpp
-create.o:
-	g++ -c create.cpp
-inventory.o:
-	g++ -c inventory.cpp
-main.o:
-	g++ -c main.cpp
-battleground.o:
-	g++ -c battleground.cpp
+CXX = g++
+CXXFLAGS = -c -std=c++17 -I. -Wall -g -fPIC
 
+TARGET = transformer
+
+LIBPROJECT = $(TARGET).a
+
+TESTPROJECT = test-$(TARGET)
+
+SOURCES = transformer.cpp create.cpp player.cpp inventory.cpp battleground.cpp autobot.cpp main.cpp decepticon.cpp
+
+OBJECTS = $(SOURCES:.cpp=.o)
+
+TEST_SOURCES = test-inventory.cpp
+TEST_OBJECTS = $(TEST_SOURCES:.cpp=.o)
+
+LDXXFLAGS = -L. -l:$(LIBPROJECT)
+LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -pthread
+
+default: all
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
+
+$(LIBPROJECT): $(OBJECTS)
+	ar rsv $(LIBPROJECT) $(OBJECTS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+$(TESTPROJECT): $(LIBPROJECT) $(TEST_OBJECTS)
+	$(CXX) -o $(TESTPROJECT) $(TEST_OBJECTS) $(LDGTESTFLAGS)
+
+runtests: $(TESTPROJECT)
+	./$(TESTPROJECT)
+
+all: $(TARGET) $(LIBPROJECT) $(TESTPROJECT)
 clean:
-	rm -f *o
+	rm -f $(OBJECTS) $(TEST_OBJECTS)
+
 cleanall: clean
-	rm -f test
+	rm -f $(TARGET) $(LIBPROJECT) $(TESTPROJECT)

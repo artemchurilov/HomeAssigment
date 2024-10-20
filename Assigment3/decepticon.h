@@ -1,3 +1,7 @@
+/* Artem Churilov st130184@student.spbu.ru
+   3 task "Class Transformer"
+*/
+
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 
