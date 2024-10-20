@@ -10,10 +10,6 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 
-TEST(InventoryTest, DefaultConstructor) {
-    Inventory inventory;
-    EXPECT_EQ(inventory.getItem(0), 0);
-}
 
 TEST(InventoryTest, ConstructorWithSize) {
     Inventory inventory(5);

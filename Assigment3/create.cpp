@@ -11,7 +11,7 @@ void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& r
     uint stFuel = 1;
     uint stEnergy = 1;
 
-    std::cout<<"Please, enter 4 charateristic of your transformer."<<std::endl<<"Sum of them must be equal 10, so be carefully with choice."<<std::endl<<"Split your points between movespeed, count of inventory slots, start energy and fuel. Minimum for each - 1"<<std::endl<<std::endl;
+    std::cout<<"Please, enter 4 characteristic of your transformer."<<std::endl<<"Sum of them must be equal 10, so be carefully with choice."<<std::endl<<"Split your points between movespeed, count of inventory slots, start energy and fuel. Minimum for each - 1"<<std::endl<<std::endl;
     std::cout<<"Movespeed -- ";
     std::cin>>stMS;
     if (stMS>=1 and stMS<=7)

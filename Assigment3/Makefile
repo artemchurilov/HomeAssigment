@@ -11,7 +11,7 @@ SOURCES = transformer.cpp create.cpp player.cpp inventory.cpp battleground.cpp a
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-TEST_SOURCES = test-inventory.cpp
+TEST_SOURCES = test-battleground.cpp test-inventory.cpp test-create.cpp test-transformer.cpp test-autobot.cpp test-decepticon.cpp test-player.cpp
 TEST_OBJECTS = $(TEST_SOURCES:.cpp=.o)
 
 LDXXFLAGS = -L. -l:$(LIBPROJECT)
