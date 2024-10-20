@@ -1,6 +1,6 @@
 #include <iostream>
 #include "create.h"
-void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy)
+void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& reName)
 {
     uint stMS = 1;
     uint stIS = 1;
@@ -31,7 +31,9 @@ void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy)
                         reIS = stIS;
                         reFuel = stFuel;
                         reEnergy = stEnergy;
-                    }
+                        std::cout<<"So, enter your name -- ";
+                        std::cin>>reName; 
+                     }
                     else
                     {
                         std::cout<<"Something went wrong.Please try again"<<std::endl;

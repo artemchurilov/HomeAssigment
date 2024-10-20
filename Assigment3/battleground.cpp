@@ -6,13 +6,13 @@ Battleground::Battleground(std::string nameBG):nameBG(nameBG)
     count = 0;
     for(int i=0; i<4; ++i)
     {
-        arr[i]=new Transformer();
+        arr[i] = new Transformer();
     }
 };
 
 Battleground::~Battleground()
 {
-    std::cout<<"Battleground destroyed"<<std::endl;
+    std::cout<<"Battleground " <<nameBG<<" destroyed"<<std::endl;
     std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     for(int i=0; i<4; ++i)
     {

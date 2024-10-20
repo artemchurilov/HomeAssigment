@@ -1,5 +1,5 @@
-#ifndef FUNC_H
-#define FUNC_H
+#ifndef INVENTORY_H
+#define INVENTORY_H
 
 #include <iostream>
 

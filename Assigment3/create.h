@@ -2,7 +2,7 @@
 #define CREATE_H
 #include <iostream>
 
-void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy);
+void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& reName);
 
 #endif
 

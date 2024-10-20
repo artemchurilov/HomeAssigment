@@ -8,7 +8,7 @@ public:
     Transformer();
     Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy);
 
-    bool fire();
+    virtual bool fire();
     bool run();
     void useInventory();
     void addItemToInv(int index, int item);
@@ -30,7 +30,7 @@ public:
     void setAmmo(uint ammo);
 
     ~Transformer();
-private:
+protected:
     Inventory* Tinventory;
 
     uint _movespeed;
