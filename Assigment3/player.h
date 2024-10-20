@@ -7,7 +7,8 @@
 
 #include "transformer.h"
 
-class Player: public Transformer {
+class Player: public Transformer 
+{
 public:
     Player(uint reMS, uint reIS, uint reFuel, uint reEnergy, std::string reName);
     ~Player();

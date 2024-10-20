@@ -27,7 +27,8 @@ TEST(PlayerTest, Transform)
     EXPECT_TRUE(p.transform());  
 }
 
-TEST(PlayerTest, GetSetMethods) {
+TEST(PlayerTest, GetSetMethods) 
+{
     Player p(2, 2, 3, 3, "Optimus Prime");
     p.setKills(5);
     EXPECT_EQ(p.getKills(), 5);

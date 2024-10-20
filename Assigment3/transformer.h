@@ -7,7 +7,8 @@
 #include "inventory.h"
 #include <iostream>
 
-class Transformer {
+class Transformer 
+{
 public:
     Transformer();
     Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy);
@@ -45,5 +46,3 @@ protected:
 };
 
 #endif
-
-

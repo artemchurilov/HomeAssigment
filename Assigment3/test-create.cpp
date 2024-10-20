@@ -8,36 +8,31 @@
 #include "create.h"
 
 
-class InputOutputMock {
+class InputOutputMock 
+{
 public:
     std::stringstream input;
     std::stringstream output;
-
-    InputOutputMock() {
+    InputOutputMock() 
+    {
         std::cin.rdbuf(input.rdbuf());
         std::cout.rdbuf(output.rdbuf());
     }
-
-    ~InputOutputMock() {
+    ~InputOutputMock() 
+    {
         std::cin.rdbuf(nullptr);
         std::cout.rdbuf(nullptr);
-    }
-
-    std::string getOutput() {
-        return output.str();
     }
 };
 
 
-TEST(CreateTest, SuccessfulCreation) {
+TEST(CreateTest, SuccessfulCreation) 
+{
     InputOutputMock io;
     uint ms, is, fuel, energy;
     std::string name;
-
     io.input << "2\n3\n2\n3\nOptimusPrime\n";
-
     create(ms, is, fuel, energy, name);
-
     EXPECT_EQ(ms, 2);
     EXPECT_EQ(is, 3);
     EXPECT_EQ(fuel, 2);

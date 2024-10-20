@@ -9,6 +9,7 @@ Transformer::Transformer()
 {
     Tinventory = new Inventory();
 };
+
 Transformer::~Transformer()
 {
     delete Tinventory;
@@ -26,7 +27,8 @@ Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
 };
 
 
-void Transformer::useInventory() {
+void Transformer::useInventory() 
+{
     Tinventory->displayItems();
 };
 
@@ -34,6 +36,7 @@ void Transformer::addItemToInv(int index, int item)
 {
     Tinventory->addItem(index,item);
 };
+
 bool Transformer::fire()
 {
     _ammo--;
@@ -93,5 +96,3 @@ void Transformer::setAmmo(uint ammo)
 {
     _ammo = ammo;
 };
-
-

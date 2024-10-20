@@ -5,7 +5,8 @@
 #include <gtest/gtest.h>
 #include "autobot.h"
 
-TEST(AutobotTest, ParameterizedConstructor) {
+TEST(AutobotTest, ParameterizedConstructor)
+{
     Autobot a(1, 1, 1, 7);
     EXPECT_EQ(a.getMS(), 1);  
     EXPECT_EQ(a.getIS(), 1);   
@@ -13,12 +14,14 @@ TEST(AutobotTest, ParameterizedConstructor) {
     EXPECT_EQ(a.getEnergy(), 7);
 }
 
-TEST(AutobotTest, Transform) {
+TEST(AutobotTest, Transform) 
+{
     Autobot a(1, 1, 1, 7);
     EXPECT_TRUE(a.transform()); 
 }
 
-TEST(AutobotTest, GetSetMethods) {
+TEST(AutobotTest, GetSetMethods) 
+{
     Autobot a(1, 1, 1, 7);
     a.setRep(15);
     EXPECT_EQ(a.getRep(), 15); 

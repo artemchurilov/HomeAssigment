@@ -6,7 +6,8 @@
 #include <gtest/gtest.h>
 #include "decepticon.h"
 
-TEST(DecepticonTest, ParameterizedConstructor) {
+TEST(DecepticonTest, ParameterizedConstructor) 
+{
     Decepticon d(1, 1, 1, 7);
     EXPECT_EQ(d.getMS(), 1);  
     EXPECT_EQ(d.getIS(), 1);   
@@ -14,12 +15,14 @@ TEST(DecepticonTest, ParameterizedConstructor) {
     EXPECT_EQ(d.getEnergy(), 7);
 }
 
-TEST(DecepticonTest, Transform) {
+TEST(DecepticonTest, Transform) 
+{
     Decepticon d(1, 1, 1, 7);
     EXPECT_TRUE(d.transform()); 
 }
 
-TEST(DecepticonTest, GetSetMethods) {
+TEST(DecepticonTest, GetSetMethods) 
+{
     Decepticon d(1, 1, 1, 7);
     d.setRank(15);
     EXPECT_EQ(d.getRank(), 15); 

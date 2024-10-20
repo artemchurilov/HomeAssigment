@@ -6,17 +6,17 @@
 #include "battleground.h"
 #include "transformer.h"
 
-TEST(BattlegroundTest, AddTransformer) {
+TEST(BattlegroundTest, AddTransformer) 
+{
     Battleground bg("Test Arena");
     Transformer* t1 = new Transformer();
     bg.addTransformer(t1); 
     EXPECT_NO_THROW(bg.addTransformer(t1)); 
-
 }
 
-TEST(BattlegroundTest, RemoveTransformerFromEmpty) {
+TEST(BattlegroundTest, RemoveTransformerFromEmpty) 
+{
     Battleground bg("Test Arena");
-
     std::ostringstream oss;
     testing::internal::CaptureStdout();
     bg.removeTransformer(0);
@@ -24,7 +24,8 @@ TEST(BattlegroundTest, RemoveTransformerFromEmpty) {
     EXPECT_TRUE(output.find("Transformer removed.") == std::string::npos); 
 }
 
-TEST(BattlegroundTest, CorrectRemoveTransformer) {
+TEST(BattlegroundTest, CorrectRemoveTransformer) 
+{
     Battleground bg("Test Arena");
     Transformer* t1 = new Transformer();
     bg.addTransformer(t1); 

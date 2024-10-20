@@ -7,7 +7,8 @@
 
 #include "transformer.h"
 
-class Autobot: public Transformer {
+class Autobot: public Transformer 
+{
 public:
     Autobot(uint reMS, uint reIS, uint reFuel, uint reEnergy);
     ~Autobot();

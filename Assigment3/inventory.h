@@ -7,7 +7,8 @@
 
 #include <iostream>
 
-class Inventory{
+class Inventory
+{
 public:
     Inventory();
     Inventory(uint size);
@@ -19,7 +20,6 @@ private:
     int* inv;
     int size;
 };
-
 
 #endif
 

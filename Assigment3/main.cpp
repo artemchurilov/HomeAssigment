@@ -23,17 +23,14 @@ int main()
 	Autobot bot2(1,1,1,7);
         Decepticon bot3(2,3,2,3);
         Decepticon bot4(3,2,4,1);
-	
 	Battleground firstlocation("Earth");
 	firstlocation.addTransformer(&bot1);
 	firstlocation.addTransformer(&bot2);
 	firstlocation.addTransformer(&bot3);
 	firstlocation.addTransformer(&bot4);
 	firstlocation.listBG();
-	
 	firstlocation.removeTransformer(0);
 	firstlocation.listBG();
-	
 	Battleground secondlocation("Moon");
 	secondlocation.addTransformer(&bot1);
 	secondlocation.listBG();

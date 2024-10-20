@@ -7,7 +7,8 @@
 
 #include "transformer.h"
 
-class Decepticon: public Transformer {
+class Decepticon: public Transformer 
+{
 public:
     Decepticon(uint reMS, uint reIS, uint reFuel, uint reEnergy);
     ~Decepticon();

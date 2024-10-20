@@ -13,7 +13,10 @@ Inventory::Inventory()
 Inventory::Inventory(uint size):size(size)
 {
     inv = new int[size];
-    for (int i=0; i<int(size); ++i){inv[i]=0;}
+    for (int i=0; i<int(size); ++i)
+    {
+        inv[i]=0;
+    }
     std::cout << "Inventory with " << size << " slot(s) created."<<std::endl;
     std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
 };
@@ -27,7 +30,8 @@ Inventory::~Inventory()
 
 void Inventory::displayItems() 
 {
-    for (int i = 0; i < int(size); ++i) {
+    for (int i = 0; i < int(size); ++i) 
+    {
         std::cout<<"Item["<<i+1<<"]: " <<inv[i]<<std::endl;
     }
 };

@@ -8,12 +8,13 @@ Player::Player(uint reMS, uint reIS, uint reFuel, uint reEnergy, std::string reN
 {
     _name = reName;
 };
+
 Player::~Player()
 {
-
 };
 
-bool Player::fire() {
+bool Player::fire() 
+{
     std::cout << _name << " doesn't know how to fire" << std::endl;
     std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     return false;
@@ -52,5 +53,3 @@ void Player::setShieldlvl(int reShieldlvl)
 {
     _shieldlvl = reShieldlvl;
 };
-
-
