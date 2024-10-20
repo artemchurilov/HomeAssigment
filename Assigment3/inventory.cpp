@@ -3,20 +3,36 @@
 
 Inventory::Inventory()
 {
+    inv = new int[1];
+    for (int i=0; i<1; ++i){inv[i]=0;}
 };
-Inventory::Inventory(uint maxsize)
+Inventory::Inventory(uint size):size(size)
 {
-    std::string* buffer = new std::string[maxsize];
-    std::cin>>buffer[0];
-    std::cout<<buffer[0]<<std::endl;
+    inv = new int[size];
+    for (int i=0; i<size; ++i){inv[i]=0;}
+    std::cout << "Inventory with " << size << " slot(s) created."<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
 };
 
 Inventory::~Inventory()
 {
-   delete [] buffer;
+    std::cout << "Inventory destoryed"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    delete[] inv;
 };
 
-void Inventory::check(){
-
+void Inventory::displayItems() 
+{
+    for (int i = 0; i < size; ++i) {
+        std::cout<<"Item["<<i+1<<"]: " <<inv[i]<<std::endl;
+        
+    }
 };
 
+void Inventory::addItem(int index, int item)
+{
+    if (index >= 0 and index<size)
+    {
+        inv[index] = item;
+    }
+};

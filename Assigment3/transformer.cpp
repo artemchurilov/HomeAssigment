@@ -3,43 +3,39 @@
 
 Transformer::Transformer()
 {
-
+    Tinventory = new Inventory();
 };
 Transformer::~Transformer()
 {
-
+    delete Tinventory;
 };
 
-Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy):Tinventory(reIS)
+Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
 {
-    std::cout<<"created"<<std::endl;
+    Tinventory = new Inventory(reIS);
+    std::cout<<"Special transformer created"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     setMS(reMS);
     setIS(reIS);
     setFuel(reFuel);
     setEnergy(reEnergy);
 };
 
+
+void Transformer::useInventory() {
+    Tinventory->displayItems();
+};
+
+void Transformer::addItemToInv(int index, int item)
+{
+    Tinventory->addItem(index,item);
+};
 bool Transformer::fire()
 {
     _ammo--;
     std::cout<<"Fired"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     return true;
-};
-
-bool Transformer::pickup()
-{
-     if (_inventoryslots>0 and _energy>0)
-     {
-         _inventoryslots--;
-         _energy--;
-         std::cout<<"You picked up an item"<<std::endl;
-         return true;
-     }
-     else
-     {
-         std::cout<<"You cannot pick up items now"<<std::endl;
-         return false;
-     }
 };
 
 uint Transformer::getMS()

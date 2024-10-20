@@ -6,11 +6,14 @@
 class Inventory{
 public:
     Inventory();
-    Inventory(uint maxsize);
+    Inventory(uint size);
     ~Inventory();
-    void check();
+    void addItem(int index, int item);
+    void displayItems();
 private:
-    std::string* buffer;
+    int* inv;
+    int size;
+    
 };
 
 
