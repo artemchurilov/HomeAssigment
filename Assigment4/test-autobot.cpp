@@ -49,6 +49,16 @@ TEST(AutobotTest, EqLess) {
     EXPECT_TRUE(a1<=a2);
 }
 
+TEST(AutobotTest, Output) 
+{
+    Autobot a1(4,3,2,1);
+    std::ostringstream os;
+    testing::internal::CaptureStdout();
+    std::cout<<a1;
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Autobot info") == std::string::npos); 
+}
+
 TEST(AutobotTest, ParameterizedConstructor)
 {
     Autobot a(1, 1, 1, 7);

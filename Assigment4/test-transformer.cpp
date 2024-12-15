@@ -42,6 +42,15 @@ TEST(TransformerTest, EqLess) {
     Transformer t2(7,1,1,1);
     EXPECT_TRUE(t1<=t2);
 }
+TEST(TransformerTest, Output) 
+{
+    Transformer t1(4,3,2,1);
+    std::ostringstream os;
+    testing::internal::CaptureStdout();
+    std::cout<<t1;
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Transformer info") == std::string::npos); 
+}
 
 
 TEST(TransformerTest, ParameterizedConstructor) {

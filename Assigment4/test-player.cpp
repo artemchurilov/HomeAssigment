@@ -49,6 +49,15 @@ TEST(PlayerTest, EqLess) {
     EXPECT_TRUE(p1<=p2);
 }
 
+TEST(PlayerTest, Output) 
+{
+    Player p1(4,3,2,1, "TestBot");
+    std::ostringstream os;
+    testing::internal::CaptureStdout();
+    std::cout<<p1;
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Player info") == std::string::npos); 
+}
 
 TEST(PlayerTest, LessParameterizedConstructor) {
     Player p(7, 1, "Optimus");

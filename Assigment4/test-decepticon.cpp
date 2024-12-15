@@ -49,6 +49,17 @@ TEST(DecepticonTest, EqLess) {
     EXPECT_TRUE(d1<=d2);
 }
 
+TEST(DecepticonTest, Output) 
+{
+    Decepticon d1(4,3,2,1);
+    std::ostringstream os;
+    testing::internal::CaptureStdout();
+    std::cout<<d1;
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_TRUE(output.find("Decepticon info") == std::string::npos); 
+}
+
+
 TEST(DecepticonTest, LessParameterizedConstructor) {
     Decepticon d(4, 4);
     EXPECT_EQ(d.getMS(), 4);  
