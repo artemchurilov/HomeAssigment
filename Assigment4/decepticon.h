@@ -23,6 +23,7 @@ public:
     friend bool operator>(const Decepticon& lhs, const Decepticon& rhs);
     friend bool operator<=(const Decepticon& lhs, const Decepticon& rhs);
     friend bool operator>=(const Decepticon& lhs, const Decepticon& rhs);
+    friend std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon);
 private:
     uint _rank;
     std::string _scheme;

@@ -35,6 +35,7 @@ std::string Decepticon::getScheme()
     return _scheme;
 };
 
+
 void Decepticon::setScheme(std::string reScheme)
 {
     _scheme = reScheme;
@@ -73,5 +74,16 @@ bool operator<=(const Decepticon& lhs, const Decepticon& rhs) {
 
 bool operator>=(const Decepticon& lhs, const Decepticon& rhs) {
     return !(lhs < rhs); 
+}
+
+std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
+    os << "Decepticon Info:\n"
+       << "Move Speed: " << decepticon._movespeed << "\n"
+       << "Inventory Slots: " << decepticon._inventoryslots << "\n"
+       << "Fuel: " << decepticon._fuel << "\n"
+       << "Energy: " << decepticon._energy << "\n"
+       << "Attack: " << decepticon._attacklvl << "\n"
+       <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return os; 
 }
 

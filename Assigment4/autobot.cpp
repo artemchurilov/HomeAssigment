@@ -71,3 +71,15 @@ bool operator<=(const Autobot& lhs, const Autobot& rhs) {
 bool operator>=(const Autobot& lhs, const Autobot& rhs) {
     return !(lhs < rhs); 
 }
+
+std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
+    os << "Autobot Info:\n"
+       << "Move Speed: " << autobot._movespeed << "\n"
+       << "Inventory Slots: " << autobot._inventoryslots << "\n"
+       << "Fuel: " << autobot._fuel << "\n"
+       << "Energy: " << autobot._energy << "\n"
+       << "Shield: " << autobot._shieldlvl << "\n"
+       <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return os; 
+}
+

@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #ifndef TRANSFORMER_H
@@ -40,6 +40,7 @@ public:
     friend bool operator>(const Transformer& lhs, const Transformer& rhs);
     friend bool operator<=(const Transformer& lhs, const Transformer& rhs);
     friend bool operator>=(const Transformer& lhs, const Transformer& rhs);
+    friend std::ostream& operator<<(std::ostream& os, const Transformer& transformer);
 
     ~Transformer();
 protected:

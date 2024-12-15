@@ -122,3 +122,13 @@ bool operator>=(const Transformer& lhs, const Transformer& rhs) {
     return !(lhs < rhs); 
 }
 
+std::ostream& operator<<(std::ostream& os, const Transformer& transformer) {
+    os << "Transformer Info:\n"
+       << "Move Speed: " << transformer._movespeed << "\n"
+       << "Inventory Slots: " << transformer._inventoryslots << "\n"
+       << "Fuel: " << transformer._fuel << "\n"
+       << "Energy: " << transformer._energy << "\n"
+       <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return os; 
+}
+

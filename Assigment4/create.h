@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #ifndef CREATE_H

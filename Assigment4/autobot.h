@@ -24,7 +24,7 @@ public:
     friend bool operator>(const Autobot& lhs, const Autobot& rhs);
     friend bool operator<=(const Autobot& lhs, const Autobot& rhs);
     friend bool operator>=(const Autobot& lhs, const Autobot& rhs);
-
+    friend std::ostream& operator<<(std::ostream& os, const Autobot& autobot);
 private:
     uint _reputation;
     std::string _mission;
