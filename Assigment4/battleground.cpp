@@ -28,24 +28,24 @@ Battleground::~Battleground()
 void Battleground::addTransformer(Transformer* transformer)
 {
     if(count<4)
-        {
+    {
         arr[count++]=transformer;
         std::cout <<"Transformer added." << std::endl;
         std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-        }
-   else 
-   {
+    }
+    else
+    {
         std::cout << "Not enough place!" << std::endl;
         std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     }
 };
 
-void Battleground::removeTransformer(int index) 
+void Battleground::removeTransformer(int index)
 {
-   if (index >= 0 and index < count) 
-   {
+    if (index >= 0 and index < count)
+    {
         arr[index] = nullptr;
-        for (int i = index; i < count - 1; ++i) 
+        for (int i = index; i < count - 1; ++i)
         {
             arr[i] = arr[i + 1];
         }
@@ -54,12 +54,12 @@ void Battleground::removeTransformer(int index)
         std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     }
 }
-   
-void Battleground::listBG() 
+
+void Battleground::listBG()
 {
-    for (int i = 0; i < count; ++i) 
+    for (int i = 0; i < count; ++i)
     {
-        std::cout << "Transformer " << i+1 <<" on Battleground -- " << nameBG<<", with his inventory: "<<std::endl;            
+        std::cout << "Transformer " << i+1 <<" on Battleground -- " << nameBG<<", with his inventory: "<<std::endl;
         arr[i]->useInventory();
         std::cout << std::endl;
     }

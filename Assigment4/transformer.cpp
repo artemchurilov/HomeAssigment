@@ -17,10 +17,10 @@ Transformer::~Transformer()
 
 Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
     : Tinventory(new Inventory(reIS)),
-      _movespeed(reMS),                 
-      _inventoryslots(reIS),            
-      _fuel(reFuel),                    
-      _energy(reEnergy)                 
+      _movespeed(reMS),
+      _inventoryslots(reIS),
+      _fuel(reFuel),
+      _energy(reEnergy)
 {
     std::cout << "Special transformer created" << std::endl;
     std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
@@ -29,10 +29,10 @@ Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
 
 Transformer::Transformer(uint reMS, uint reIS)
     : Tinventory(new Inventory(reIS)),
-      _movespeed(reMS),                 
-      _inventoryslots(reIS),            
-      _fuel(1),                    
-      _energy(1)                 
+      _movespeed(reMS),
+      _inventoryslots(reIS),
+      _fuel(1),
+      _energy(1)
 {
     std::cout << "Transformer with minimal fuel and energy created" << std::endl;
     std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
@@ -40,7 +40,7 @@ Transformer::Transformer(uint reMS, uint reIS)
 
 
 
-void Transformer::useInventory() 
+void Transformer::useInventory()
 {
     Tinventory->displayItems();
 };
@@ -110,37 +110,44 @@ void Transformer::setAmmo(uint ammo)
     _ammo = ammo;
 };
 
-bool operator==(const Transformer& lhs, const Transformer& rhs) {
+bool operator==(const Transformer& lhs, const Transformer& rhs)
+{
     return (lhs._movespeed) == (rhs._movespeed);
 }
 
-bool operator<(const Transformer& lhs, const Transformer& rhs) {
+bool operator<(const Transformer& lhs, const Transformer& rhs)
+{
     return (lhs._movespeed) < (rhs._movespeed);
 }
 
-bool operator>(const Transformer& lhs, const Transformer& rhs) {
+bool operator>(const Transformer& lhs, const Transformer& rhs)
+{
     return rhs < lhs;
 }
 
-bool operator!=(const Transformer& lhs, const Transformer& rhs) {
+bool operator!=(const Transformer& lhs, const Transformer& rhs)
+{
     return !(lhs == rhs);
 }
 
-bool operator<=(const Transformer& lhs, const Transformer& rhs) {
-    return !(rhs < lhs); 
+bool operator<=(const Transformer& lhs, const Transformer& rhs)
+{
+    return !(rhs < lhs);
 }
 
-bool operator>=(const Transformer& lhs, const Transformer& rhs) {
-    return !(lhs < rhs); 
+bool operator>=(const Transformer& lhs, const Transformer& rhs)
+{
+    return !(lhs < rhs);
 }
 
-std::ostream& operator<<(std::ostream& os, const Transformer& transformer) {
+std::ostream& operator<<(std::ostream& os, const Transformer& transformer)
+{
     os << "Transformer Info:\n"
        << "Move Speed: " << transformer._movespeed << "\n"
        << "Inventory Slots: " << transformer._inventoryslots << "\n"
        << "Fuel: " << transformer._fuel << "\n"
        << "Energy: " << transformer._energy << "\n"
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-    return os; 
+    return os;
 }
 

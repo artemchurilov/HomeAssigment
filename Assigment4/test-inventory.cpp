@@ -5,32 +5,38 @@
 #include "gtest/gtest.h"
 #include "inventory.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
 
 
-TEST(InventoryTest, ConstructorWithSize) {
+TEST(InventoryTest, ConstructorWithSize)
+{
     Inventory inventory(5);
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; ++i)
+    {
         EXPECT_EQ(inventory.getItem(i), 0);
     }
 }
 
-TEST(InventoryTest, AddItem) {
+TEST(InventoryTest, AddItem)
+{
     Inventory inventory(3);
     inventory.addItem(1, 10);
     EXPECT_EQ(inventory.getItem(1), 10);
 }
 
-TEST(InventoryTest, AddItemOutOfBounds) {
+TEST(InventoryTest, AddItemOutOfBounds)
+{
     Inventory inventory(3);
     inventory.addItem(5, 10);
     EXPECT_EQ(inventory.getItem(2), 0);
 }
 
-TEST(InventoryTest, DisplayItems) {
+TEST(InventoryTest, DisplayItems)
+{
     Inventory inventory(3);
     inventory.addItem(0, 5);
     inventory.addItem(1, 10);
@@ -38,13 +44,15 @@ TEST(InventoryTest, DisplayItems) {
     inventory.displayItems();
 }
 
-TEST(InventoryTest, GetItemValidIndex) {
+TEST(InventoryTest, GetItemValidIndex)
+{
     Inventory inv(3);
     inv.addItem(0, 42);
     EXPECT_EQ(inv.getItem(0), 42);
 }
 
-TEST(InventoryTest, GetItemInvalidIndex) {
+TEST(InventoryTest, GetItemInvalidIndex)
+{
     Inventory inv(3);
     EXPECT_EQ(inv.getItem(-1), -1);
     EXPECT_EQ(inv.getItem(3), -1);

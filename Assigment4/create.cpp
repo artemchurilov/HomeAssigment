@@ -37,7 +37,7 @@ void create(uint& reMS, uint& reIS, uint& reFuel, uint& reEnergy, std::string& r
                         reEnergy = stEnergy;
                         std::cout<<"So, enter your name -- ";
                         std::cin>>reName;
-                     }
+                    }
                     else
                     {
                         std::cout<<"Something went wrong.Please try again"<<std::endl;

@@ -5,7 +5,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "transformer.h"
-class Player: public Transformer 
+class Player: public Transformer
 {
 public:
     Player(uint reMS, uint reIS, uint reFuel, uint reEnergy, std::string reName);
@@ -26,7 +26,7 @@ public:
     friend bool operator<=(const Player& lhs, const Player& rhs);
     friend bool operator>=(const Player& lhs, const Player& rhs);
     friend std::ostream& operator<<(std::ostream& os, const Player& player);
-    
+
 private:
     uint _kills;
     std::string _name;

@@ -4,7 +4,7 @@
 
 #include "decepticon.h"
 
-Decepticon::Decepticon(uint reMS, uint reIS):Transformer(reMS, reIS)            
+Decepticon::Decepticon(uint reMS, uint reIS):Transformer(reMS, reIS)
 {
     std::cout << "Decepticon with minimal fuel and energy created" << std::endl;
     std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
@@ -57,31 +57,38 @@ void Decepticon::setAttacklvl(int reAttacklvl)
 };
 
 
-bool operator==(const Decepticon& lhs, const Decepticon& rhs) {
+bool operator==(const Decepticon& lhs, const Decepticon& rhs)
+{
     return (lhs._attacklvl) == (rhs._attacklvl);
 }
 
-bool operator<(const Decepticon& lhs, const Decepticon& rhs) {
+bool operator<(const Decepticon& lhs, const Decepticon& rhs)
+{
     return (lhs._attacklvl) < (rhs._attacklvl);
 }
 
-bool operator>(const Decepticon& lhs, const Decepticon& rhs) {
+bool operator>(const Decepticon& lhs, const Decepticon& rhs)
+{
     return rhs < lhs;
 }
 
-bool operator!=(const Decepticon& lhs, const Decepticon& rhs) {
+bool operator!=(const Decepticon& lhs, const Decepticon& rhs)
+{
     return !(lhs == rhs);
 }
 
-bool operator<=(const Decepticon& lhs, const Decepticon& rhs) {
-    return !(rhs < lhs); 
+bool operator<=(const Decepticon& lhs, const Decepticon& rhs)
+{
+    return !(rhs < lhs);
 }
 
-bool operator>=(const Decepticon& lhs, const Decepticon& rhs) {
-    return !(lhs < rhs); 
+bool operator>=(const Decepticon& lhs, const Decepticon& rhs)
+{
+    return !(lhs < rhs);
 }
 
-std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
+std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon)
+{
     os << "Decepticon Info:\n"
        << "Move Speed: " << decepticon._movespeed << "\n"
        << "Inventory Slots: " << decepticon._inventoryslots << "\n"
@@ -89,6 +96,6 @@ std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
        << "Energy: " << decepticon._energy << "\n"
        << "Attack: " << decepticon._attacklvl << "\n"
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-    return os; 
+    return os;
 }
 

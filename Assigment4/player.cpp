@@ -18,7 +18,7 @@ Player::~Player()
 {
 };
 
-bool Player::fire() 
+bool Player::fire()
 {
     std::cout << _name << " doesn't know how to fire" << std::endl;
     std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
@@ -60,31 +60,38 @@ void Player::setShieldlvl(int reShieldlvl)
 };
 
 
-bool operator==(const Player& lhs, const Player& rhs) {
+bool operator==(const Player& lhs, const Player& rhs)
+{
     return (lhs._shieldlvl) == (rhs._shieldlvl);
 }
 
-bool operator<(const Player& lhs, const Player& rhs) {
+bool operator<(const Player& lhs, const Player& rhs)
+{
     return (lhs._shieldlvl) < (rhs._shieldlvl);
 }
 
-bool operator>(const Player& lhs, const Player& rhs) {
+bool operator>(const Player& lhs, const Player& rhs)
+{
     return rhs < lhs;
 }
 
-bool operator!=(const Player& lhs, const Player& rhs) {
+bool operator!=(const Player& lhs, const Player& rhs)
+{
     return !(lhs == rhs);
 }
 
-bool operator<=(const Player& lhs, const Player& rhs) {
-    return !(rhs < lhs); 
+bool operator<=(const Player& lhs, const Player& rhs)
+{
+    return !(rhs < lhs);
 }
 
-bool operator>=(const Player& lhs, const Player& rhs) {
-    return !(lhs < rhs); 
+bool operator>=(const Player& lhs, const Player& rhs)
+{
+    return !(lhs < rhs);
 }
 
-std::ostream& operator<<(std::ostream& os, const Player& player) {
+std::ostream& operator<<(std::ostream& os, const Player& player)
+{
     os << "Player Info:\n"
        << "Name: " << player._name << "\n"
        << "Move Speed: " << player._movespeed << "\n"
@@ -93,6 +100,6 @@ std::ostream& operator<<(std::ostream& os, const Player& player) {
        << "Energy: " << player._energy << "\n"
        << "Shield: " << player._shieldlvl << "\n"
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-    return os; 
+    return os;
 }
 

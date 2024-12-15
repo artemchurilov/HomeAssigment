@@ -7,7 +7,7 @@
 #include "inventory.h"
 #include <iostream>
 
-class Transformer 
+class Transformer
 {
 public:
     Transformer();

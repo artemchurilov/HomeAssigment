@@ -8,17 +8,17 @@
 #include "create.h"
 
 
-class InputOutputMock 
+class InputOutputMock
 {
 public:
     std::stringstream input;
     std::stringstream output;
-    InputOutputMock() 
+    InputOutputMock()
     {
         std::cin.rdbuf(input.rdbuf());
         std::cout.rdbuf(output.rdbuf());
     }
-    ~InputOutputMock() 
+    ~InputOutputMock()
     {
         std::cin.rdbuf(nullptr);
         std::cout.rdbuf(nullptr);
@@ -26,7 +26,7 @@ public:
 };
 
 
-TEST(CreateTest, SuccessfulCreation) 
+TEST(CreateTest, SuccessfulCreation)
 {
     InputOutputMock io;
     uint ms, is, fuel, energy;

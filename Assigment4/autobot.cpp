@@ -7,7 +7,7 @@ Autobot::Autobot(uint reMS, uint reIS, uint reFuel, uint reEnergy):Transformer(r
 {
 };
 
-Autobot::Autobot(uint reMS, uint reIS):Transformer(reMS, reIS)            
+Autobot::Autobot(uint reMS, uint reIS):Transformer(reMS, reIS)
 {
     std::cout << "Autobot with minimal fuel and energy created" << std::endl;
     std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
@@ -53,31 +53,38 @@ void Autobot::setShieldlvl(int reShieldlvl)
     _shieldlvl = reShieldlvl;
 };
 
-bool operator==(const Autobot& lhs, const Autobot& rhs) {
+bool operator==(const Autobot& lhs, const Autobot& rhs)
+{
     return (lhs._shieldlvl) == (rhs._shieldlvl);
 }
 
-bool operator<(const Autobot& lhs, const Autobot& rhs) {
+bool operator<(const Autobot& lhs, const Autobot& rhs)
+{
     return (lhs._shieldlvl) < (rhs._shieldlvl);
 }
 
-bool operator>(const Autobot& lhs, const Autobot& rhs) {
+bool operator>(const Autobot& lhs, const Autobot& rhs)
+{
     return rhs < lhs;
 }
 
-bool operator!=(const Autobot& lhs, const Autobot& rhs) {
+bool operator!=(const Autobot& lhs, const Autobot& rhs)
+{
     return !(lhs == rhs);
 }
 
-bool operator<=(const Autobot& lhs, const Autobot& rhs) {
-    return !(rhs < lhs); 
+bool operator<=(const Autobot& lhs, const Autobot& rhs)
+{
+    return !(rhs < lhs);
 }
 
-bool operator>=(const Autobot& lhs, const Autobot& rhs) {
-    return !(lhs < rhs); 
+bool operator>=(const Autobot& lhs, const Autobot& rhs)
+{
+    return !(lhs < rhs);
 }
 
-std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
+std::ostream& operator<<(std::ostream& os, const Autobot& autobot)
+{
     os << "Autobot Info:\n"
        << "Move Speed: " << autobot._movespeed << "\n"
        << "Inventory Slots: " << autobot._inventoryslots << "\n"
@@ -85,6 +92,6 @@ std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
        << "Energy: " << autobot._energy << "\n"
        << "Shield: " << autobot._shieldlvl << "\n"
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-    return os; 
+    return os;
 }
 

@@ -28,9 +28,9 @@ Inventory::~Inventory()
     delete[] inv;
 };
 
-void Inventory::displayItems() 
+void Inventory::displayItems()
 {
-    for (int i = 0; i < int(size); ++i) 
+    for (int i = 0; i < int(size); ++i)
     {
         std::cout<<"Item["<<i+1<<"]: " <<inv[i]<<std::endl;
     }
