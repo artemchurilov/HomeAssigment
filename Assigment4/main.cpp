@@ -34,6 +34,7 @@ int main()
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;}
         if (bot1>=bot2){std::cout<<"Your transformer is faster (or the same)"<<std::endl
        <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;}
+        bot1.setShieldlvl(10005);
         bot3.setShieldlvl(5);
         bot5.setAttacklvl(6);
         std::cout<<bot1;

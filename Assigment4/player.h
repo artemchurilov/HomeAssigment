@@ -24,6 +24,7 @@ public:
     friend bool operator>(const Player& lhs, const Player& rhs);
     friend bool operator<=(const Player& lhs, const Player& rhs);
     friend bool operator>=(const Player& lhs, const Player& rhs);
+    friend std::ostream& operator<<(std::ostream& os, const Player& player);
 private:
     uint _kills;
     std::string _name;

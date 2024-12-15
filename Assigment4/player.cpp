@@ -79,3 +79,16 @@ bool operator<=(const Player& lhs, const Player& rhs) {
 bool operator>=(const Player& lhs, const Player& rhs) {
     return !(lhs < rhs); 
 }
+
+std::ostream& operator<<(std::ostream& os, const Player& player) {
+    os << "Player Info:\n"
+       << "Name: " << player._name << "\n"
+       << "Move Speed: " << player._movespeed << "\n"
+       << "Inventory Slots: " << player._inventoryslots << "\n"
+       << "Fuel: " << player._fuel << "\n"
+       << "Energy: " << player._energy << "\n"
+       << "Shield: " << player._shieldlvl << "\n"
+       <<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return os; 
+}
+
