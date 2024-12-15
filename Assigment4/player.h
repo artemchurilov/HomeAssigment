@@ -1,12 +1,10 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #ifndef PLAYER_H
 #define PLAYER_H
-
 #include "transformer.h"
-
 class Player: public Transformer 
 {
 public:
@@ -20,6 +18,12 @@ public:
     void setShieldlvl(int reShieldlvl);
     bool transform();
     bool fire() override;
+    friend bool operator==(const Player& lhs, const Player& rhs);
+    friend bool operator!=(const Player& lhs, const Player& rhs);
+    friend bool operator<(const Player& lhs, const Player& rhs);
+    friend bool operator>(const Player& lhs, const Player& rhs);
+    friend bool operator<=(const Player& lhs, const Player& rhs);
+    friend bool operator>=(const Player& lhs, const Player& rhs);
 private:
     uint _kills;
     std::string _name;

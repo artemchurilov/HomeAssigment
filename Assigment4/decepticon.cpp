@@ -1,8 +1,9 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include "decepticon.h"
+
 
 Decepticon::Decepticon(uint reMS, uint reIS, uint reFuel, uint reEnergy):Transformer(reMS, reIS, reFuel, reEnergy)
 {
@@ -48,4 +49,29 @@ void Decepticon::setAttacklvl(int reAttacklvl)
 {
     _attacklvl = reAttacklvl;
 };
+
+
+bool operator==(const Decepticon& lhs, const Decepticon& rhs) {
+    return (lhs._attacklvl) == (rhs._attacklvl);
+}
+
+bool operator<(const Decepticon& lhs, const Decepticon& rhs) {
+    return (lhs._attacklvl) < (rhs._attacklvl);
+}
+
+bool operator>(const Decepticon& lhs, const Decepticon& rhs) {
+    return rhs < lhs;
+}
+
+bool operator!=(const Decepticon& lhs, const Decepticon& rhs) {
+    return !(lhs == rhs);
+}
+
+bool operator<=(const Decepticon& lhs, const Decepticon& rhs) {
+    return !(rhs < lhs); 
+}
+
+bool operator>=(const Decepticon& lhs, const Decepticon& rhs) {
+    return !(lhs < rhs); 
+}
 

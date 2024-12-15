@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include "autobot.h"
@@ -48,3 +48,26 @@ void Autobot::setShieldlvl(int reShieldlvl)
     _shieldlvl = reShieldlvl;
 };
 
+bool operator==(const Autobot& lhs, const Autobot& rhs) {
+    return (lhs._shieldlvl) == (rhs._shieldlvl);
+}
+
+bool operator<(const Autobot& lhs, const Autobot& rhs) {
+    return (lhs._shieldlvl) < (rhs._shieldlvl);
+}
+
+bool operator>(const Autobot& lhs, const Autobot& rhs) {
+    return rhs < lhs;
+}
+
+bool operator!=(const Autobot& lhs, const Autobot& rhs) {
+    return !(lhs == rhs);
+}
+
+bool operator<=(const Autobot& lhs, const Autobot& rhs) {
+    return !(rhs < lhs); 
+}
+
+bool operator>=(const Autobot& lhs, const Autobot& rhs) {
+    return !(lhs < rhs); 
+}

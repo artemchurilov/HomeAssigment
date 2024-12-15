@@ -1,8 +1,9 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include "player.h"
+
 
 Player::Player(uint reMS, uint reIS, uint reFuel, uint reEnergy, std::string reName):Transformer(reMS, reIS, reFuel, reEnergy)
 {
@@ -53,3 +54,28 @@ void Player::setShieldlvl(int reShieldlvl)
 {
     _shieldlvl = reShieldlvl;
 };
+
+
+bool operator==(const Player& lhs, const Player& rhs) {
+    return (lhs._shieldlvl) == (rhs._shieldlvl);
+}
+
+bool operator<(const Player& lhs, const Player& rhs) {
+    return (lhs._shieldlvl) < (rhs._shieldlvl);
+}
+
+bool operator>(const Player& lhs, const Player& rhs) {
+    return rhs < lhs;
+}
+
+bool operator!=(const Player& lhs, const Player& rhs) {
+    return !(lhs == rhs);
+}
+
+bool operator<=(const Player& lhs, const Player& rhs) {
+    return !(rhs < lhs); 
+}
+
+bool operator>=(const Player& lhs, const Player& rhs) {
+    return !(lhs < rhs); 
+}

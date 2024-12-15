@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include "transformer.h"
@@ -16,15 +16,16 @@ Transformer::~Transformer()
 };
 
 Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
+    : Tinventory(new Inventory(reIS)),
+      _movespeed(reMS),                 
+      _inventoryslots(reIS),            
+      _fuel(reFuel),                    
+      _energy(reEnergy)                 
 {
-    Tinventory = new Inventory(reIS);
-    std::cout<<"Special transformer created"<<std::endl;
-    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-    setMS(reMS);
-    setIS(reIS);
-    setFuel(reFuel);
-    setEnergy(reEnergy);
-};
+    std::cout << "Special transformer created" << std::endl;
+    std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
+}
+
 
 
 void Transformer::useInventory() 
@@ -96,3 +97,28 @@ void Transformer::setAmmo(uint ammo)
 {
     _ammo = ammo;
 };
+
+bool operator==(const Transformer& lhs, const Transformer& rhs) {
+    return (lhs._movespeed) == (rhs._movespeed);
+}
+
+bool operator<(const Transformer& lhs, const Transformer& rhs) {
+    return (lhs._movespeed) < (rhs._movespeed);
+}
+
+bool operator>(const Transformer& lhs, const Transformer& rhs) {
+    return rhs < lhs;
+}
+
+bool operator!=(const Transformer& lhs, const Transformer& rhs) {
+    return !(lhs == rhs);
+}
+
+bool operator<=(const Transformer& lhs, const Transformer& rhs) {
+    return !(rhs < lhs); 
+}
+
+bool operator>=(const Transformer& lhs, const Transformer& rhs) {
+    return !(lhs < rhs); 
+}
+

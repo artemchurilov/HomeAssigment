@@ -1,12 +1,10 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
-
 #include "transformer.h"
-
 class Decepticon: public Transformer 
 {
 public:
@@ -19,6 +17,12 @@ public:
     int getAttacklvl();
     void setAttacklvl(int reAttacklvl);
     bool transform();
+    friend bool operator==(const Decepticon& lhs, const Decepticon& rhs);
+    friend bool operator!=(const Decepticon& lhs, const Decepticon& rhs);
+    friend bool operator<(const Decepticon& lhs, const Decepticon& rhs);
+    friend bool operator>(const Decepticon& lhs, const Decepticon& rhs);
+    friend bool operator<=(const Decepticon& lhs, const Decepticon& rhs);
+    friend bool operator>=(const Decepticon& lhs, const Decepticon& rhs);
 private:
     uint _rank;
     std::string _scheme;

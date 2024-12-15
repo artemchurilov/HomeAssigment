@@ -1,12 +1,10 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
-
 #include "transformer.h"
-
 class Autobot: public Transformer 
 {
 public:
@@ -19,6 +17,14 @@ public:
     int getShieldlvl();
     void setShieldlvl(int reShieldlvl);
     bool transform();
+    
+    friend bool operator==(const Autobot& lhs, const Autobot& rhs);
+    friend bool operator!=(const Autobot& lhs, const Autobot& rhs);
+    friend bool operator<(const Autobot& lhs, const Autobot& rhs);
+    friend bool operator>(const Autobot& lhs, const Autobot& rhs);
+    friend bool operator<=(const Autobot& lhs, const Autobot& rhs);
+    friend bool operator>=(const Autobot& lhs, const Autobot& rhs);
+
 private:
     uint _reputation;
     std::string _mission;

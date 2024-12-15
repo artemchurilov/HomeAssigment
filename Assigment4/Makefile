@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -c -std=c++17 -I. -Wall -g -fPIC
+CXXFLAGS = -c -std=c++17 -I. -Werror -Wpedantic -Wall -g -fPIC
 
 TARGET = transformer
 

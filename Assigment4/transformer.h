@@ -34,14 +34,21 @@ public:
     uint getAmmo();
     void setAmmo(uint ammo);
 
+    friend bool operator==(const Transformer& lhs, const Transformer& rhs);
+    friend bool operator!=(const Transformer& lhs, const Transformer& rhs);
+    friend bool operator<(const Transformer& lhs, const Transformer& rhs);
+    friend bool operator>(const Transformer& lhs, const Transformer& rhs);
+    friend bool operator<=(const Transformer& lhs, const Transformer& rhs);
+    friend bool operator>=(const Transformer& lhs, const Transformer& rhs);
+
     ~Transformer();
 protected:
     Inventory* Tinventory;
 
     uint _movespeed;
     uint _inventoryslots;
-    uint _energy;
     uint _fuel;
+    uint _energy;
     uint _ammo;
 };
 

@@ -20,32 +20,15 @@ int main()
     {
         std::cout<<std::endl;
     	Player bot1(reMS, reIS, reFuel, reEnergy, reName);
-	Autobot bot2(1,1,1,7);
-        Decepticon bot3(2,3,2,3);
-        Decepticon bot4(3,2,4,1);
-	Battleground firstlocation("Earth");
-	firstlocation.addTransformer(&bot1);
-	firstlocation.addTransformer(&bot2);
-	firstlocation.addTransformer(&bot3);
-	firstlocation.addTransformer(&bot4);
-	firstlocation.listBG();
-	firstlocation.removeTransformer(0);
-	firstlocation.listBG();
-	Battleground secondlocation("Moon");
-	secondlocation.addTransformer(&bot1);
-	secondlocation.listBG();
-        bot1.addItemToInv(1,1);
-        bot2.addItemToInv(0,4);
-        bot1.transform();
-        bot2.transform();
-        bot3.transform();
-        bot4.transform();
-        bot1.fire();
-        bot2.fire();
-        bot3.fire();
-        std::string yourname=bot1.getName();
-        secondlocation.listBG();
-        firstlocation.listBG();
+    	Transformer bot2(1,1,1,7);
+    	Autobot bot3(1,4,1,4);
+    	Autobot bot4(2,2,3,3);
+        if (bot3<bot4){std::cout<<"Your transformer is slower((("<<std::endl;}
+        if (bot1>bot2){std::cout<<"Your transformer is faster!"<<std::endl;}
+        if (bot1==bot2){std::cout<<"Draw!"<<std::endl;}
+        if (bot1<=bot2){std::cout<<"Your transformer is slower (or the same)"<<std::endl;}
+        if (bot1>=bot2){std::cout<<"Your transformer is faster (or the same)"<<std::endl;}
+        
     }
 }
 
