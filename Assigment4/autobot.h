@@ -9,6 +9,7 @@ class Autobot: public Transformer
 {
 public:
     Autobot(uint reMS, uint reIS, uint reFuel, uint reEnergy);
+    Autobot(uint reMS, uint reIS);
     ~Autobot();
     uint getRep();
     void setRep(uint reRep);

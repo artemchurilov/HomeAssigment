@@ -7,6 +7,11 @@ Autobot::Autobot(uint reMS, uint reIS, uint reFuel, uint reEnergy):Transformer(r
 {
 };
 
+Autobot::Autobot(uint reMS, uint reIS):Transformer(reMS, reIS)            
+{
+    std::cout << "Autobot with minimal fuel and energy created" << std::endl;
+    std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
+};
 Autobot::~Autobot()
 {
 };

@@ -12,6 +12,7 @@ class Transformer
 public:
     Transformer();
     Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy);
+    Transformer(uint reMS, uint reIS);
 
     virtual bool fire();
     bool run();

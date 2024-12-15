@@ -24,7 +24,19 @@ Transformer::Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy)
 {
     std::cout << "Special transformer created" << std::endl;
     std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
-}
+};
+
+
+Transformer::Transformer(uint reMS, uint reIS)
+    : Tinventory(new Inventory(reIS)),
+      _movespeed(reMS),                 
+      _inventoryslots(reIS),            
+      _fuel(1),                    
+      _energy(1)                 
+{
+    std::cout << "Transformer with minimal fuel and energy created" << std::endl;
+    std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
+};
 
 
 

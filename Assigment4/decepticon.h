@@ -9,6 +9,7 @@ class Decepticon: public Transformer
 {
 public:
     Decepticon(uint reMS, uint reIS, uint reFuel, uint reEnergy);
+    Decepticon(uint reMS, uint reIS);
     ~Decepticon();
     uint getRank();
     void setRank(uint reRank);

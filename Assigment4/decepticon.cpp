@@ -4,6 +4,11 @@
 
 #include "decepticon.h"
 
+Decepticon::Decepticon(uint reMS, uint reIS):Transformer(reMS, reIS)            
+{
+    std::cout << "Decepticon with minimal fuel and energy created" << std::endl;
+    std::cout << std::endl << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl << std::endl;
+};
 
 Decepticon::Decepticon(uint reMS, uint reIS, uint reFuel, uint reEnergy):Transformer(reMS, reIS, reFuel, reEnergy)
 {
