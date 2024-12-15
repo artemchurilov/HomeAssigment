@@ -1,10 +1,18 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 
 #include <gtest/gtest.h>
 #include "decepticon.h"
+
+TEST(DecepticonTest, LessParameterizedConstructor) {
+    Decepticon d(4, 4);
+    EXPECT_EQ(d.getMS(), 4);  
+    EXPECT_EQ(d.getIS(), 4);   
+    EXPECT_EQ(d.getFuel(), 1); 
+    EXPECT_EQ(d.getEnergy(), 1);
+}
 
 TEST(DecepticonTest, ParameterizedConstructor) 
 {

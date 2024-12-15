@@ -5,6 +5,16 @@
 #include <gtest/gtest.h>
 #include "player.h"
 
+TEST(PlayerTest, LessParameterizedConstructor) {
+    Player p(7, 1, "Optimus");
+    EXPECT_EQ(p.getMS(), 7);   
+    EXPECT_EQ(p.getIS(), 1);    
+    EXPECT_EQ(p.getFuel(), 1);
+    EXPECT_EQ(p.getEnergy(), 1);
+    EXPECT_EQ(p.getName(), "Optimus"); 
+}
+
+
 TEST(PlayerTest, ParameterizedConstructor) 
 {
     Player p(2, 2, 3, 3, "Optimus Prime");

@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include <gtest/gtest.h>
@@ -14,6 +14,13 @@ TEST(AutobotTest, ParameterizedConstructor)
     EXPECT_EQ(a.getEnergy(), 7);
 }
 
+TEST(AutobotTest, LessParameterizedConstructor) {
+    Autobot a(4, 4);
+    EXPECT_EQ(a.getMS(), 4);  
+    EXPECT_EQ(a.getIS(), 4);   
+    EXPECT_EQ(a.getFuel(), 1); 
+    EXPECT_EQ(a.getEnergy(), 1);
+}
 TEST(AutobotTest, Transform) 
 {
     Autobot a(1, 1, 1, 7);

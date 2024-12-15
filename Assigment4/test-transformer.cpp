@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include <gtest/gtest.h>
@@ -20,11 +20,12 @@ TEST(TransformerTest, ParameterizedConstructor) {
     EXPECT_EQ(t.getEnergy(), 4);
 }
 
-TEST(TransformerTest, AddItemToInventory) {
-    Transformer t(1, 2, 3, 4);
-    t.addItemToInv(0, 42); 
-    EXPECT_EQ(t.getIS(), 2); 
-    EXPECT_EQ(t.getAmmo(), 0); 
+TEST(TransformerTest, LessParameterizedConstructor) {
+    Transformer t(4, 4);
+    EXPECT_EQ(t.getMS(), 4);  
+    EXPECT_EQ(t.getIS(), 4);   
+    EXPECT_EQ(t.getFuel(), 1); 
+    EXPECT_EQ(t.getEnergy(), 1);
 }
 
 TEST(TransformerTest, Fire) {

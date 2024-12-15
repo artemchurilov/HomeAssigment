@@ -4,6 +4,10 @@
 
 #include "player.h"
 
+Player::Player(uint reMS, uint reIS, std::string reName):Transformer(reMS, reIS)
+{
+    _name = reName;
+};
 
 Player::Player(uint reMS, uint reIS, uint reFuel, uint reEnergy, std::string reName):Transformer(reMS, reIS, reFuel, reEnergy)
 {
