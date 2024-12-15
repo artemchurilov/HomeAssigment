@@ -8,7 +8,7 @@ st130184@student.spbu.ru
 
 
 <par> make </par>
-
+<par> make tests </par>
 ## Run
 
 <par> ./transformer </par>

@@ -1,9 +1,54 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   4 task "Overload"
 */
 
 #include <gtest/gtest.h>
 #include "player.h"
+
+TEST(PlayerTest, Equality) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(50);
+    p2.setShieldlvl(50);
+    EXPECT_TRUE(p1==p2);
+}
+TEST(PlayerTest, NotEquality) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(50);
+    p2.setShieldlvl(60);
+    EXPECT_TRUE(p1!=p2);
+}
+TEST(PlayerTest, More) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(60);
+    p2.setShieldlvl(50);
+    EXPECT_TRUE(p1>p2);
+}
+TEST(PlayerTest, Less) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(50);
+    p2.setShieldlvl(60);
+    EXPECT_TRUE(p1<p2);
+}
+
+TEST(PlayerTest, EqMore) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(60);
+    p2.setShieldlvl(50);
+    EXPECT_TRUE(p1>=p2);
+}
+TEST(PlayerTest, EqLess) {
+    Player p1(7, 1, "Optimus");
+    Player p2(7, 1, "Bumblebee");
+    p1.setShieldlvl(50);
+    p2.setShieldlvl(60);
+    EXPECT_TRUE(p1<=p2);
+}
+
 
 TEST(PlayerTest, LessParameterizedConstructor) {
     Player p(7, 1, "Optimus");

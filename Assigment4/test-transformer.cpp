@@ -11,6 +11,38 @@ TEST(TransformerTest, DefaultConstructor) {
     EXPECT_NE(t.getIS(), 0);
 }
 
+TEST(TransformerTest, Equality) {
+    Transformer t1(1,2,3,4);
+    Transformer t2(1,2,3,4);
+    EXPECT_TRUE(t1==t2);
+}
+TEST(TransformerTest, NotEquality) {
+    Transformer t1(4,3,2,1);
+    Transformer t2(1,2,3,4);
+    EXPECT_TRUE(t1!=t2);
+}
+TEST(TransformerTest, More) {
+    Transformer t1(4,3,2,1);
+    Transformer t2(1,2,3,4);
+    EXPECT_TRUE(t1>t2);
+}
+TEST(TransformerTest, Less) {
+    Transformer t1(4,3,2,1);
+    Transformer t2(7,1,1,1);
+    EXPECT_TRUE(t1<t2);
+}
+
+TEST(TransformerTest, EqMore) {
+    Transformer t1(4,3,2,1);
+    Transformer t2(1,2,3,4);
+    EXPECT_TRUE(t1>=t2);
+}
+TEST(TransformerTest, EqLess) {
+    Transformer t1(4,3,2,1);
+    Transformer t2(7,1,1,1);
+    EXPECT_TRUE(t1<=t2);
+}
+
 
 TEST(TransformerTest, ParameterizedConstructor) {
     Transformer t(1, 2, 3, 4);

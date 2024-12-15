@@ -5,6 +5,50 @@
 #include <gtest/gtest.h>
 #include "autobot.h"
 
+TEST(AutobotTest, Equality) {
+    Autobot a1(1,2,3,4);
+    Autobot a2(1,2,3,4);
+    a1.setShieldlvl(50);
+    a2.setShieldlvl(50);
+    EXPECT_TRUE(a1==a2);
+}
+TEST(AutobotTest, NotEquality) {
+    Autobot a1(4,3,2,1);
+    Autobot a2(1,2,3,4);
+    a1.setShieldlvl(50);
+    a2.setShieldlvl(60);
+    EXPECT_TRUE(a1!=a2);
+}
+TEST(AutobotTest, More) {
+    Autobot a1(4,3,2,1);
+    Autobot a2(1,2,3,4);
+    a1.setShieldlvl(60);
+    a2.setShieldlvl(50);
+    EXPECT_TRUE(a1>a2);
+}
+TEST(AutobotTest, Less) {
+    Autobot a1(4,3,2,1);
+    Autobot a2(7,1,1,1);
+    a1.setShieldlvl(50);
+    a2.setShieldlvl(60);
+    EXPECT_TRUE(a1<a2);
+}
+
+TEST(AutobotTest, EqMore) {
+    Autobot a1(4,3,2,1);
+    Autobot a2(1,2,3,4);
+    a1.setShieldlvl(60);
+    a2.setShieldlvl(50);
+    EXPECT_TRUE(a1>=a2);
+}
+TEST(AutobotTest, EqLess) {
+    Autobot a1(4,3,2,1);
+    Autobot a2(7,1,1,1);
+    a1.setShieldlvl(50);
+    a2.setShieldlvl(60);
+    EXPECT_TRUE(a1<=a2);
+}
+
 TEST(AutobotTest, ParameterizedConstructor)
 {
     Autobot a(1, 1, 1, 7);

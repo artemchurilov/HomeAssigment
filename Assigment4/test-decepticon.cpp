@@ -5,6 +5,49 @@
 
 #include <gtest/gtest.h>
 #include "decepticon.h"
+TEST(DecepticonTest, Equality) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(50);
+    d2.setAttacklvl(50);
+    EXPECT_TRUE(d1==d2);
+}
+TEST(DecepticonTest, NotEquality) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(50);
+    d2.setAttacklvl(60);
+    EXPECT_TRUE(d1!=d2);
+}
+TEST(DecepticonTest, More) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(60);
+    d2.setAttacklvl(50);
+    EXPECT_TRUE(d1>d2);
+}
+TEST(DecepticonTest, Less) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(50);
+    d2.setAttacklvl(60);
+    EXPECT_TRUE(d1<d2);
+}
+
+TEST(DecepticonTest, EqMore) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(60);
+    d2.setAttacklvl(50);
+    EXPECT_TRUE(d1>=d2);
+}
+TEST(DecepticonTest, EqLess) {
+    Decepticon d1(1,2,3,4);
+    Decepticon d2(1,2,3,4);
+    d1.setAttacklvl(50);
+    d2.setAttacklvl(60);
+    EXPECT_TRUE(d1<=d2);
+}
 
 TEST(DecepticonTest, LessParameterizedConstructor) {
     Decepticon d(4, 4);
