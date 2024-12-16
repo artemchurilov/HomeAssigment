@@ -5,6 +5,45 @@
 #include <gtest/gtest.h>
 #include "autobot.h"
 
+TEST(AutobotTest, JumpFromP)
+{
+    Autobot a(1,2,3,4);
+    Transformer *p = &a;
+    EXPECT_TRUE(p->jump());
+}
+
+TEST(AutobotTest, MegaAttackFromP)
+{
+    Autobot a(1,2,3,4);
+    Transformer *p = &a;
+    EXPECT_TRUE(p->megaAttack());
+}
+
+TEST(AutobotTest, BlastFromP)
+{
+    Autobot a(1,2,3,4);
+    Transformer *p = &a;
+    EXPECT_TRUE(p->blast());
+}
+
+TEST(AutobotTest, Jump)
+{
+    Autobot a(1,2,3,4);
+    EXPECT_TRUE(a.jump());
+}
+
+TEST(AutobotTest, MegaAttack)
+{
+    Autobot a(1,2,3,4);
+    EXPECT_TRUE(a.megaAttack());
+}
+
+TEST(AutobotTest, Blast)
+{
+    Autobot a(1,2,3,4);
+    EXPECT_TRUE(a.blast());
+}
+
 TEST(AutobotTest, Equality)
 {
     Autobot a1(1,2,3,4);

@@ -52,26 +52,26 @@ void Transformer::addItemToInv(int index, int item)
 
 bool Transformer::jump()
 {
-  std::cout<<"Transformer || Jump"<<std::endl;
-  std::cout<<"Jump was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Transformer || Jump"<<std::endl;
+    std::cout<<"Jump was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Transformer::megaAttack()
 {
-  std::cout<<"Transformer || MegaAttack"<<std::endl;
-  std::cout<<"MegaAttack was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Transformer || MegaAttack"<<std::endl;
+    std::cout<<"MegaAttack was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Transformer::blast()
 {
-  std::cout<<"Transformer || Blast"<<std::endl;
-  std::cout<<"Blast was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Transformer || Blast"<<std::endl;
+    std::cout<<"Blast was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Transformer::fire()

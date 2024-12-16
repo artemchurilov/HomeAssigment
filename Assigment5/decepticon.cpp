@@ -27,26 +27,26 @@ bool Decepticon::transform()
 
 bool Decepticon::jump()
 {
-  std::cout<<"Decepticon || Jump"<<std::endl;
-  std::cout<<"Decepticon's Jump was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Decepticon || Jump"<<std::endl;
+    std::cout<<"Decepticon's Jump was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Decepticon::megaAttack()
 {
-  std::cout<<"Decepticon || MegaAttack"<<std::endl;
-  std::cout<<"Decepticon's MegaAttack was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Decepticon || MegaAttack"<<std::endl;
+    std::cout<<"Decepticon's MegaAttack was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Decepticon::blast()
 {
-  std::cout<<"Decepticon || Blast"<<std::endl;
-  std::cout<<"Decepticon's Blast was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Decepticon || Blast"<<std::endl;
+    std::cout<<"Decepticon's Blast was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 uint Decepticon::getRank()

@@ -10,6 +10,7 @@
 #include "autobot.h"
 #include "decepticon.h"
 #include "player.h"
+#include <vector>
 
 int main()
 {
@@ -61,7 +62,7 @@ int main()
         std::cout<<a1;
         std::cout<<d1;
         std::cout<<t1;
-        
+
         t1.jump();
         t1.megaAttack();
         t1.blast();
@@ -71,9 +72,16 @@ int main()
         d1.jump();
         d1.megaAttack();
         d1.blast();
-        
-        
+        std::vector<Transformer*> teams{&t1, &a1, &d1, &t2, &a2, &d2, &t3, &a3, &d3};
+
+        for (const auto& bot : teams)
+        {
+            bot->jump();
+            bot->megaAttack();
+            bot->blast();
+        }
     }
+
 }
 
 

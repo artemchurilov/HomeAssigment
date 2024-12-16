@@ -25,26 +25,26 @@ bool Autobot::transform()
 
 bool Autobot::jump()
 {
-  std::cout<<"Autobot || Jump"<<std::endl;
-  std::cout<<"Autobot's Jump was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Autobot || Jump"<<std::endl;
+    std::cout<<"Autobot's Jump was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Autobot::megaAttack()
 {
-  std::cout<<"Autobot || MegaAttack"<<std::endl;
-  std::cout<<"Autobot's MegaAttack was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Autobot || MegaAttack"<<std::endl;
+    std::cout<<"Autobot's MegaAttack was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 bool Autobot::blast()
 {
-  std::cout<<"Autobot || Blast"<<std::endl;
-  std::cout<<"Autobot's Blast was made!"<<std::endl;
-  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
-  return true;
+    std::cout<<"Autobot || Blast"<<std::endl;
+    std::cout<<"Autobot's Blast was made!"<<std::endl;
+    std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+    return true;
 };
 
 uint Autobot::getRep()

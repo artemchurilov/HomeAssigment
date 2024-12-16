@@ -5,6 +5,47 @@
 
 #include <gtest/gtest.h>
 #include "decepticon.h"
+
+TEST(DecepticonTest, JumpFromP)
+{
+    Decepticon d(1,2,3,4);
+    Transformer *p = &d;
+    EXPECT_TRUE(p->jump());
+}
+
+TEST(DecepticonTest, MegaAttackFromP)
+{
+    Decepticon d(1,2,3,4);
+    Transformer *p = &d;
+    EXPECT_TRUE(p->megaAttack());
+}
+
+TEST(DecepticonTest, BlastFromP)
+{
+    Decepticon d(1,2,3,4);
+    Transformer *p = &d;
+    EXPECT_TRUE(p->blast());
+}
+
+
+TEST(DecepticonTest, Jump)
+{
+    Decepticon d(1,2,3,4);
+    EXPECT_TRUE(d.jump());
+}
+
+TEST(DecepticonTest, MegaAttack)
+{
+    Decepticon d(1,2,3,4);
+    EXPECT_TRUE(d.megaAttack());
+}
+
+TEST(DecepticonTest, Blast)
+{
+    Decepticon d(1,2,3,4);
+    EXPECT_TRUE(d.blast());
+}
+
 TEST(DecepticonTest, Equality)
 {
     Decepticon d1(1,2,3,4);
