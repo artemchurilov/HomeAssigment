@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   4 task "Overload"
+   5 task "Virtual&Vector"
 */
 
 #include "autobot.h"
@@ -21,6 +21,30 @@ bool Autobot::transform()
     std::cout << "Autobot transformed"<<std::endl;
     std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
     return true;
+};
+
+bool Autobot::jump()
+{
+  std::cout<<"Autobot || Jump"<<std::endl;
+  std::cout<<"Autobot's Jump was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
+};
+
+bool Autobot::megaAttack()
+{
+  std::cout<<"Autobot || MegaAttack"<<std::endl;
+  std::cout<<"Autobot's MegaAttack was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
+};
+
+bool Autobot::blast()
+{
+  std::cout<<"Autobot || Blast"<<std::endl;
+  std::cout<<"Autobot's Blast was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
 };
 
 uint Autobot::getRep()

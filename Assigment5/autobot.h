@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   4 task "Overload"
+   5 task "Virtual&Vector"
 */
 
 #ifndef AUTOBOT_H
@@ -18,7 +18,9 @@ public:
     int getShieldlvl();
     void setShieldlvl(int reShieldlvl);
     bool transform();
-
+    bool jump() override;
+    bool megaAttack() override;
+    bool blast() override;
     friend bool operator==(const Autobot& lhs, const Autobot& rhs);
     friend bool operator!=(const Autobot& lhs, const Autobot& rhs);
     friend bool operator<(const Autobot& lhs, const Autobot& rhs);

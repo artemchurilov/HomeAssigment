@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   3 task "Class Transformer"
+   5 task "Virtual&Vector"
 */
 
 #include <gtest/gtest.h>

@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   4 task "Overload"
+   5 task "Virtual&Vector"
 */
 
 #ifndef TRANSFORMER_H
@@ -13,7 +13,9 @@ public:
     Transformer();
     Transformer(uint reMS, uint reIS, uint reFuel, uint reEnergy);
     Transformer(uint reMS, uint reIS);
-
+    virtual bool jump();
+    virtual bool megaAttack();
+    virtual bool blast();
     virtual bool fire();
     bool run();
     void useInventory();

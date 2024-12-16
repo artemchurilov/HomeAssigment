@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   4 task "Overload"
+   5 task "Virtual&Vector"
 */
 
 #ifndef DECEPTICON_H
@@ -18,6 +18,9 @@ public:
     int getAttacklvl();
     void setAttacklvl(int reAttacklvl);
     bool transform();
+    bool jump() override;
+    bool megaAttack() override;
+    bool blast() override;
     friend bool operator==(const Decepticon& lhs, const Decepticon& rhs);
     friend bool operator!=(const Decepticon& lhs, const Decepticon& rhs);
     friend bool operator<(const Decepticon& lhs, const Decepticon& rhs);

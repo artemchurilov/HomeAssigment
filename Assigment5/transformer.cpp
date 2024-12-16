@@ -1,5 +1,5 @@
 /* Artem Churilov st130184@student.spbu.ru
-   4 task "Overload"
+   5 task "Virtual&Vector"
 */
 
 #include "transformer.h"
@@ -48,6 +48,30 @@ void Transformer::useInventory()
 void Transformer::addItemToInv(int index, int item)
 {
     Tinventory->addItem(index,item);
+};
+
+bool Transformer::jump()
+{
+  std::cout<<"Transformer || Jump"<<std::endl;
+  std::cout<<"Jump was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
+};
+
+bool Transformer::megaAttack()
+{
+  std::cout<<"Transformer || MegaAttack"<<std::endl;
+  std::cout<<"MegaAttack was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
+};
+
+bool Transformer::blast()
+{
+  std::cout<<"Transformer || Blast"<<std::endl;
+  std::cout<<"Blast was made!"<<std::endl;
+  std::cout<<std::endl<<"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="<<std::endl<<std::endl;
+  return true;
 };
 
 bool Transformer::fire()
